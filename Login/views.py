@@ -33,6 +33,7 @@ class CustonAuthToken(ObtainAuthToken):
       })
 
 class ExampleList2(APIView):
+   permission_classes = []
    def get(self,request,format=None):
       print("metodo get filter")
       queryset = Example2.objects.filter(delete = False)
